@@ -1,0 +1,3 @@
+rootProject.name = 'first-gradle-project'
+include 'dao'
+

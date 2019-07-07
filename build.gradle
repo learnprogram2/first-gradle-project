@@ -1,0 +1,31 @@
+plugins {
+    id 'java'
+}
+
+group 'cn.gasin'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+/* 制定所使用的仓库, mavenCentral表示中央仓库, 默认从中央仓库下载jar到本地仓库*/
+repositories {
+    mavenLocal()
+    mavenCentral()
+}
+
+/*
+    dependencies 属性: gradle 工程中的jar包坐标
+    坐标包括: group, name, version
+    testCompile 表示jar包作用域, 测试作用域
+* */
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+    // https://mvnrepository.com/artifact/org.springframework/spring-context
+    compile group: 'org.springframework', name: 'spring-context', version: '5.1.2.RELEASE'
+
+}
+
+dependentComponents{
+
+}
+
